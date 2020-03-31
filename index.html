@@ -37,33 +37,70 @@
  </head>
  <body>
   <header id="header">
-    <div class="header-top">
-      <div class="container">
-        <div class="col-4-equals">
-          <div class="col">
-            <i class="fas fa-map-marker-alt color1"></i>
-            <p class="color3 roboto">Ecuador</p>
+    <div id="news-container" class="news-container-out background-color5">
+      <div class="news-container-in">
+        <div class="top-news">
+          <div class="container">
+            <div class="top-news-content">
+              <div class="title-container center">
+                <i class="fas fa-exclamation-triangle white"></i>
+                <p class="center white">
+                  Un mensaje para nuestros usuarios
+                </p>
+              </div>
+              <div class="cerrar-container">
+                <p class="white center" id="close-news">X</p>
+              </div>
+            </div>
           </div>
-          <div class="col">
-            <i class="fas fa-wallet color1"></i>
-            <p class="color3 roboto"> Pagos a negociar con el usuario</p>
-          </div>
-          <div class="col">
-            <i class="fas fa-motorcycle color1"></i>
-            <p class="color3 roboto">Delivery a coordiar con el usuario
-          </div>
-          <div class="col">
-            <div class="box-hover-container">
-              <a href="index.html" class="button center-button background-color2 white center buscar">
-                REGISTRA TU NEGOCIO
-              </a>
+        </div>
+        <div class="bottom-news">
+          <div class="container">
+            <div class="slideshow-container">
+              <div class="mySlides fade">
+                <p class="center white">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
+                </p>
+              </div>
+              <div class="mySlides fade">
+                <p class="center white">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
+                </p>
+              </div>
+              <div class="mySlides fade">
+                <p class="center white">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="header-brand">
-      <img src="images/01-logo-color.svg">
+    <div class="container">
+      <div class="col-2-equals">
+        <div class="col">
+          <div class="header-brand">
+            <img src="images/01-logo-color.svg">
+          </div>
+        </div>
+        <div class="col">
+          <div class="contador-container-out">
+            <div class="contador-container-in">
+              <div class="text background-color3">
+                <p class="white center">
+                  Establecimientos registrados
+                </p>
+              </div>
+              <div class="number background-color5">
+                <p class="white center">
+                  1'000.000
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </header>
   <main>
@@ -72,68 +109,83 @@
         <h1 class="color1 center bebas">
           Encuentra lo que necesites
         </h1>
-        <h4 class="color3 center bebas">
-         #QuedateEnCasa REALIZA TUS PEDIDOS POR <span class="color1">WHATSAPP</span>
+        <h4 class="color1 center bebas">
+         #QuedateEnCasa</span>
         </h4>
-      </div>
-      <a href="#section-3-buscar" class="background-color2 white center center-button button">BUSCAR</a>
-    </section>
-    <section id="section-2-buscar">
-      <h2 class="color1 center">
-        ¿Cómo funciona?
-      </h2>
-      <p class="color3 center">
-        Hoy estamos lejos, pero es el momento en el que sin salir de casa, más cercanos podemos estar.
-      </p>
-      <div class="hr-center background-color1"></div>
-      <div class="container">
-        <div class="col-3-equals">
-          <div class="col">
-            <h3 class="color3 center black">
-              1
-            </h3>
-            <h6 class="center color3">
-              Busca lo que necesites segun tu barrio de residencia. 
-            </h6>
-            <div class="center">
-              <i class="fas fa-utensils color1"></i>
+        <div class="search-container">
+          <div class="col-4-equals">
+            <div class="col col1">
+              <i class="fas fa-map-marker-alt color1"></i>
+              <select class="color1">
+                <option value="" clas="color1">Elije tu ciudad</option>
+                <option value="" clas="color1"></option>
+                <option value="" clas="color1"></option>
+              </select>
             </div>
-          </div>
-          <div class="col">
-            <h3 class="color3 center black">
-              2
-            </h3>
-            <h6 class="center color3">
-              Comunícate con los NEGOCIOS por whatsapp. 
-            </h6>
-            <div class="center">
-              <i class="fab fa-whatsapp color1"></i>
+            <div class="col col2">
+              <input type="text" name="" placeholder="Ingresa tu calle del domicilio">
             </div>
-          </div>
-          <div class="col">
-            <h3 class="color3 center black">
-              3
-            </h3>
-            <h6 class="center color3">
-              Cordina con el NEGOCIO la compra y entrega de tus productos
-            </h6>
-            <div class="center">
-              <i class="fas fa-motorcycle color1"></i>
+            <div class="col col3">
+              <select class="color1">
+                <option value="" clas="color1">Elige la categoría</option>
+                <option value="" clas="color1"></option>
+                <option value="" clas="color1"></option>
+              </select>
+            </div>
+            <div class="col col4">
+              <input type="submit" name="" class="background-color3 white center button center-button" value="BUSCAR">
             </div>
           </div>
         </div>
-        <p class="color3 center">
-          Recuerda que esta es una plataforma gratuita, si tienes dudas antes de realizar tu compra revisa nuestras <a href="terminos.html" class="color3">Políticas de uso</a>.
+        <p class="color2 center">
+          Si tienes dudas antes de realizar tu búsqueda revisa nuestras <a href="terminos.html" class="color2">Políticas de uso</a>.
         </p>
-      </div>
-    </section>
-    <section id="section-3-buscar" class="background-grey">
-      <div class="container">
-      	<h3 class="center color1">EMPIEZA A BUSCAR</h3>
-        <div class="search-container background-color2">
-          <input type="text" name="" class="color3">
+        <div class="container">
+          <div class="col-3-equals instrucciones">
+            <div class="col">
+              <div class="center icon-container">
+                <i class="fas fa-utensils color1"></i>
+              </div>
+              <div class="text-container">
+                <h6 class="color1">
+                  1 Busca lo que necesites.
+                </h6>
+                <p class=" color1">
+                  Más de 100 comercios a 1km a la redonda de tu ubicación. 
+                </p>
+              </div>
+            </div>
+            <div class="col">
+              <div class="center icon-container">
+                <i class="fab fa-whatsapp color1"></i>
+              </div>
+              <div class="text-container">
+                <h6 class="color1">
+                  2 Comunícate con el comercio
+                </h6>
+                <p class=" color1">
+                  Entabla una conversación con el comercio por whatsapp. 
+                </p>
+              </div>
+            </div>
+            <div class="col">
+              <div class="center icon-container">
+                <i class="fas fa-motorcycle color1"></i>
+              </div>
+              <div class="text-container">
+                <h6 class="color1">
+                  3 Coordina la entrega
+                </h6>
+                <p class=" color1">
+                  La compra y entrega de los productos coordinarás con el comercio.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+    </section>
+    <section id="section-2-buscar" class="background-grey">
       <div class="background-color2 buscador">
           <p class="center white recomendaciones">
               <i class="fas fa-exclamation-triangle white"></i> Revisa nuestra <a href="#recomendaciones" class="white"><b>Recomendaciones</b></a>
@@ -621,5 +673,6 @@
     </div>
   </footer>
   <script type="text/javascript" src="resultados.js"></script>
+  <script type="text/javascript" src="top_news.js"></script>
  </body>
 </html>
