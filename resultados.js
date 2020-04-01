@@ -31,12 +31,11 @@ var posMenuIcons = posToFixMenu.getBoundingClientRect().top;
 var posSection4Buscar = document.getElementById('section-4-buscar').getBoundingClientRect().top;
 var anchoNavegador = document.body.clientWidth;
 
-console.log(anchoNavegador);
+
 window.onscroll = function (){  
     // En la variable scroll se almacena la posición cada vez que se mueve el scroll
     var scroll = document.documentElement.scrollTop || document.body.scrollTop;
-    console.log(scroll);
-    // Con este código puedes hacer que algo suceda entre la posición 300 y 400
+    console.log(scroll);// Con este código puedes hacer que algo suceda entre la posición 300 y 400
     if (anchoNavegador<=550) {
         if(scroll >= 1100){
             menuIconos.classList.add('menu-fixed');
