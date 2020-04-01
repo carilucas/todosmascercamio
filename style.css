@@ -714,6 +714,7 @@ header .contador-container-out .contador-container-in p{
 #section-2-buscar .locales-menu-icons .col-2-equals{
 	justify-content: center;
 	align-items: center;
+	grid-template-columns: 1fr;
 }
 #section-2-buscar .locales-menu-icons .col-2-equals .col{
 	margin: 10px 0;
@@ -1008,6 +1009,39 @@ footer .footer-top .terminos{
 	#section-5-registro .col-2-equals .col{
 		margin-top: 10px;
 	}
+	/*Buscar.html*/
+	#section-1-buscar .search-container .col-4-equals{
+		grid-template-columns: 1fr;
+		justify-content: center;
+	}
+	#section-1-buscar .search-container .col-4-equals .col{
+		margin: 5px 0; 
+	}
+	#section-1-buscar .search-container .col-4-equals .col1 i{
+		display: none
+	}
+	#section-1-buscar .search-container .col-4-equals select{
+		width: 100%;
+	}
+	#section-1-buscar .search-container .col-4-equals select{
+		border:1px solid rgba(0,0,0,0.2);
+	}
+	#section-1-buscar .instrucciones{
+		grid-template-columns: 1fr;
+	}
+	#section-2-buscar .resultados-container .col-left .lista-locales-out .col-2{
+		flex-direction: column;
+	}
+	#section-2-buscar .resultados-container .col-left .lista-locales-out .col-2 .col-right .tipo-negocio,
+	#section-2-buscar .resultados-container .col-left .lista-locales-out .col-2 .col-right .titulo-comercio{
+		text-align: center;
+	}
+	#section-2-buscar .resultados-container .col-left .lista-locales-out .col-2 .col-right .whatsapp-button{
+		margin: 20px auto;
+	}
+	#section-4-buscar .container .col-2-equals{
+		grid-template-columns: 1fr;
+	}
 }
 @media only screen and (max-width: 550px){
 	.noticia{
@@ -1138,7 +1172,13 @@ footer .footer-top .terminos{
 		top: -20px;
 		right: -20px;
 	}
+	
 
+	#section-2-buscar .locales-menu-icons .col-2-equals{
+		justify-content: center;
+		align-items: center;
+		grid-template-columns: 1fr 1fr;
+	}
 	#section-2-buscar .global-results{
 		display: grid;
 		grid-template-columns: 0 1fr;

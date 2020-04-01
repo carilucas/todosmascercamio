@@ -29,21 +29,46 @@ var menuIconos = document.getElementById('menu-iconos');
 var posToFixMenu = document.getElementById('pos-to-fix-menu');
 var posMenuIcons = posToFixMenu.getBoundingClientRect().top;
 var posSection4Buscar = document.getElementById('section-4-buscar').getBoundingClientRect().top;
+var anchoNavegador = document.body.clientWidth;
 
-console.log('posicion menu ic ' + posMenuIcons);
-
+console.log(anchoNavegador);
 window.onscroll = function (){  
     // En la variable scroll se almacena la posición cada vez que se mueve el scroll
     var scroll = document.documentElement.scrollTop || document.body.scrollTop;
+    console.log(scroll);
     // Con este código puedes hacer que algo suceda entre la posición 300 y 400
-    if(scrollY >= 1000){
-        menuIconos.classList.add('menu-fixed');
+    if (anchoNavegador<=550) {
+        if(scroll >= 1100){
+            menuIconos.classList.add('menu-fixed');
+        }else{
+            menuIconos.classList.remove('menu-fixed');
+            menu_categorias.classList.remove('mostrar-categorias');
+        }
+        if(scroll >= 3200){
+            menuIconos.classList.remove('menu-fixed');
+            menu_categorias.classList.remove('mostrar-categorias');
+        }
+    }else if (anchoNavegador>550 && anchoNavegador<=768) {
+        if(scroll >= 900){
+            menuIconos.classList.add('menu-fixed');
+        }else{
+            menuIconos.classList.remove('menu-fixed');
+            menu_categorias.classList.remove('mostrar-categorias');
+        }
+        if(scroll >= 3200){
+            menuIconos.classList.remove('menu-fixed');
+            menu_categorias.classList.remove('mostrar-categorias');
+        }
     }else{
-    	menuIconos.classList.remove('menu-fixed');
-        menu_categorias.classList.remove('mostrar-categorias');
-    }
-    if(scroll >= 3200){
-        menuIconos.classList.remove('menu-fixed');
-        menu_categorias.classList.remove('mostrar-categorias');
+        if(scroll >= 560){
+        menuIconos.classList.add('menu-fixed');
+        }else{
+            menuIconos.classList.remove('menu-fixed');
+            menu_categorias.classList.remove('mostrar-categorias');
+        }
+        if(scroll >= 2100){
+            menuIconos.classList.remove('menu-fixed');
+            menu_categorias.classList.remove('mostrar-categorias');
+        }
     }
 }
