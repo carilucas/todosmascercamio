@@ -12,6 +12,8 @@ var localContainer = document.getElementById('local-container');
 var fotoLocal = document.getElementsByClassName('foto-local');
 var iconList = document.getElementById('icon-list');
 var iconMap = document.getElementById('icon-map');
+var verMapaText = document.getElementById('ver-mapa');
+var verListaText = document.getElementById('ver-lista');
 
 
 expand.onclick = function(){
@@ -19,25 +21,28 @@ expand.onclick = function(){
 	mapa.classList.toggle('expand-map');
 	iconMap.classList.toggle('display-none');
 	iconList.classList.toggle('display-none');
+    verMapaText.classList.toggle('display-none');
+    verListaText.classList.toggle('display-none');
 }
 
 var menuIconos = document.getElementById('menu-iconos');
-var posMenuIcons = menuIconos.getBoundingClientRect().top;
+var posToFixMenu = document.getElementById('pos-to-fix-menu');
+var posMenuIcons = posToFixMenu.getBoundingClientRect().top;
 var posSection4Buscar = document.getElementById('section-4-buscar').getBoundingClientRect().top;
 
-
+console.log('posicion menu ic ' + posMenuIcons);
 
 window.onscroll = function (){  
     // En la variable scroll se almacena la posición cada vez que se mueve el scroll
     var scroll = document.documentElement.scrollTop || document.body.scrollTop;
     // Con este código puedes hacer que algo suceda entre la posición 300 y 400
-    if(scroll >= posMenuIcons){
+    if(scrollY >= 1000){
         menuIconos.classList.add('menu-fixed');
     }else{
     	menuIconos.classList.remove('menu-fixed');
         menu_categorias.classList.remove('mostrar-categorias');
     }
-    if(scroll >= posSection4Buscar){
+    if(scroll >= 3200){
         menuIconos.classList.remove('menu-fixed');
         menu_categorias.classList.remove('mostrar-categorias');
     }

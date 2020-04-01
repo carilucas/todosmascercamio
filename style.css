@@ -66,11 +66,13 @@
 }
 /*Slider*/
 /* Slideshow container */
-.mySlides {
+.noticia {
 	display: none;
 	position: relative;
+	align-items: center;
+	height: 40px;
 }
-.slideshow-container {
+.slidenews-container {
   max-width: 1000px;
   position: relative;
   margin: auto;
@@ -556,6 +558,9 @@ header .contador-container-out .contador-container-in p{
 +++++++++++++++++++++++++++++++++++++++++++++++++++*/
 #section-1-buscar{
 	padding: 30px 10px;
+	background-image: url(images/02-back-buscador.jpg);
+	background-size: cover;
+	background-position: center;
 }
 #section-1-buscar .instrucciones .col{
 	display:flex;
@@ -602,12 +607,67 @@ header .contador-container-out .contador-container-in p{
 }
 #section-1-buscar .search-container input[type=submit]{
 	margin:auto;
+	cursor: pointer;
+}
+/*Popup*/
+#section-1-buscar #popup{
+	display: flex;
+	position: fixed;
+	background-color: rgba(0,0,0,0.6);
+	width: 100%;
+	height: 100%;
+	top: 100%;
+	left: 0;
+	justify-content: center;
+	align-items: center;
+	z-index: 9;
+	transition: top 0.5s;
+	-webkit-transition: top 0.5s;
+}
+#section-1-buscar #popup .popup-box-out{
+	display: flex;
+	width: 100%;
+	max-width: 600px;
+	height: 100%;
+	margin:auto;
+	border-radius: 10px;
+}
+#section-1-buscar #popup .popup-box-in{
+	padding: 20px 20px 0;
+}
+#section-1-buscar #popup #close-popup-mapa-home,
+#section-1-buscar #popup .confirmar{
+	cursor: pointer;
+}
+#section-1-buscar #popup #close-popup-mapa-home{
+	width: 30px;
+	height: 30px;
+	float: right;
+	font-weight: bold;
+	font-size: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+}
+#section-1-buscar #popup h6{
+	margin-bottom: 20px;
+}
+
+#section-1-buscar #popup iframe{
+	display: block;
+	width: 100%;
+	height: 250px;
+	margin:auto;
+}
+.show-popup-mapa-home{
+	top: 0!important;
 }
 
 
 
 #section-2-buscar{
-	padding: 0 10px 30px;
+	padding: 0 0 30px;
 }
 
 #section-2-buscar .resultados-container{
@@ -628,7 +688,7 @@ header .contador-container-out .contador-container-in p{
 	-webkit-transition: top 0.5s;
 }
 #section-2-buscar .locales-menu-icons{
-	max-width: 200px;
+	max-width: 250px;
 	display: block;
 	margin: auto;
 }
@@ -637,10 +697,17 @@ header .contador-container-out .contador-container-in p{
 	align-items: center;
 }
 #section-2-buscar .locales-menu-icons .col-2-equals .col{
+	margin: 10px 0;
+}
+#section-2-buscar .locales-menu-icons .col-2-equals a{
+	text-decoration: none;
+}
+#section-2-buscar .locales-menu-icons .col-2-equals .col .icon-wrapper{
 	margin:15px;
 	border-radius: 50%;
 	width: 60px;
 	height: 60px;
+	margin:auto;
 }
 #section-2-buscar .locales-menu-icons .col-2-equals .col i{
 	font-size: 30px;
@@ -653,23 +720,22 @@ header .contador-container-out .contador-container-in p{
 }
 #section-2-buscar .menu-categorias-out{
 	padding: 20px 0;
-	top: 60px;
+	top: 50px;
 	max-width: 250px;
-	position: fixed;
-	left: -100%;
-	top: 90px;
+	position: relative;
+	left: 0%;
+	top: 140px;
 	transition: left 0.5s;
 	-webkit-transition: left 0.5s;
-	box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
 	z-index: 9;
 	display: block;
-	height: 100vh;
+	height: 70vh;
 }
 .mostrar-categorias{
 	left: 0!important;
 }
-#section-2-buscar .menu-categorias-out .menu-categorias-in h5{
-	border-bottom: 1px solid #5c8f28;
+#section-2-buscar .menu-categorias-out .menu-categorias-in h6{
+	
 	padding-bottom: 10px;
 }
 #section-2-buscar .menu-categorias-out .menu-categorias-in {
@@ -685,18 +751,33 @@ header .contador-container-out .contador-container-in p{
 #section-2-buscar .menu-categorias-out .menu-categorias-in ul .categoria {
 	display: flex;
 	align-items: center;
+	padding: 5px 10px;
 }
 #section-2-buscar .menu-categorias-out .menu-categorias-in ul .categoria .col{
 	margin: 5px 0 0;
+}
+#section-2-buscar .menu-categorias-out .menu-categorias-in ul .categoria .col-icon{
+	width: 30px;
 }
 #section-2-buscar .menu-categorias-out .menu-categorias-in ul .categoria .categoria-icon{
 	max-width: 30px;
 }
 #section-2-buscar .menu-categorias-out .menu-categorias-in ul .categoria .categoria-text{
+	font-size: 14px;
+	margin: auto 7px;
+	width: 140px;
+}
+#section-2-buscar .menu-categorias-out .menu-categorias-in ul .categoria .categoria-contador{
 	font-size: 12px;
 	margin: auto 7px;
+	color: #606060;
+	opacity: 0.5;
 }
 /*Lista locales*/
+#section-2-buscar .global-results{
+	display: grid;
+	grid-template-columns: 250px 1fr;
+}
 #section-2-buscar #lista-locales{
 	width: 100%;
 	position: relative;
@@ -715,11 +796,11 @@ header .contador-container-out .contador-container-in p{
 }
 #section-2-buscar .resultados-container .col-left .lista-locales-out .col-2{
 	display: flex;
-	justify-content: space-between;
+	justify-content: flex-start;
 	align-items: center;
 }
 #section-2-buscar .resultados-container .col-left .lista-locales-out .col-2 .col-left{
-	width: 30%;
+	width: 20%;
 }
 #section-2-buscar .resultados-container .col-left .lista-locales-out .col-2 .col-left .img-container{
 	border-radius: 50%;
@@ -732,10 +813,13 @@ header .contador-container-out .contador-container-in p{
 	width: 270px;
 }
 #section-2-buscar .resultados-container .col-left .lista-locales-out .col-2 .col-right{
-	width: 70%;
+	width: 80%;
 }
 #section-2-buscar .resultados-container .col-left .lista-locales-out .col-2 .col-right p{
 	margin-top: 10px;
+}
+#section-2-buscar .resultados-container .col-left .lista-locales-out .col-2 .col-right #id-negocio{
+	font-size: 12px;
 }
 #section-2-buscar .resultados-container .col-left .lista-locales-out .col-2 .col-right .whatsapp-button{
 	display: flex;
@@ -752,16 +836,17 @@ header .contador-container-out .contador-container-in p{
 	line-height: 5px;
 }
 #lista-locales{
-	transition: left 0.5s;
-	-webkit-transition: left 0.5s;
+	transition: width 0.5s;
+	-webkit-transition: width 0.5s;
 }
 #mapa{
 	transition: width 0.5s;
 	-webkit-transition: width 0.5s;
 }
 .hide-locales{
-	left:-100%;
-	height: 500px;
+	width: 0!important;
+	overflow: hidden;
+	height: 90vh;
 }
 .expand-map{
 	width: 100%!important;
@@ -906,6 +991,9 @@ footer .footer-top .terminos{
 	}
 }
 @media only screen and (max-width: 550px){
+	.noticia{
+		height: 80px;
+	}
 	/*Tamaños de fuente*/
 	h1{
 		font-size: 35px;
@@ -996,6 +1084,60 @@ footer .footer-top .terminos{
 	}
 
 	/*Buscar.html*/
+	header .news-container-in .bottom-news{
+		padding: 5px;
+		height: 80px;
+	}
+	header .header-brand-buscar .col-2-equals{
+		grid-template-columns: 1fr;
+		grid-gap: 0;
+	}
+	header .header-brand-buscar .header-brand img{
+		max-width: 200px;
+	}
+	#section-1-buscar .search-container .col-4-equals{
+		grid-template-columns: 1fr;
+	}
+	#section-1-buscar .search-container .col-4-equals .col{
+		margin: 5px 0; 
+	}
+	#section-1-buscar .search-container .col-4-equals .col1 i{
+		display: none
+	}
+	#section-1-buscar .search-container .col-4-equals select{
+		width: 100%;
+	}
+	#section-1-buscar .search-container .col-4-equals select{
+		border:1px solid rgba(0,0,0,0.2);
+	}
+	#section-1-buscar .instrucciones{
+		grid-template-columns: 1fr;
+	}
+	#section-1-buscar #popup #close-popup-mapa-home{
+		position: relative;
+		top: -20px;
+		right: -20px;
+	}
+
+	#section-2-buscar .global-results{
+		display: grid;
+		grid-template-columns: 0 1fr;
+	}
+	#section-2-buscar .menu-categorias-out{
+		padding: 20px 0;
+		max-width: 250px;
+		position: fixed;
+		left: -100%;
+		top: 100px;
+		transition: left 0.5s;
+		-webkit-transition: left 0.5s;
+		z-index: 9;
+		display: block;
+		height: 70vh;
+		box-shadow: 5px 5px 5px rgba(0,0,0,.3);
+	}
+
+
 	#section-2-buscar .col-3-equals{
 		grid-template-columns: 1fr;
 	}
@@ -1012,6 +1154,9 @@ footer .footer-top .terminos{
 	#section-2-buscar .lista-locales-out .col-2 h5{
 		text-align: center;
 		margin-top: 5px;
+	}
+	#section-2-buscar .lista-locales-out .col-2 .tipo-negocio{
+		text-align: center;
 	}
 	#section-2-buscar .resultados-container .col-left .lista-locales-out .col-2 .col-right .whatsapp-button{
 		margin: 10px auto;
@@ -1055,7 +1200,9 @@ footer .footer-top .terminos{
 	
 }
 
-/*animationes*/
+/*++++++++++++++++++++++++++++++++++++++++++++
+			animaciones
+++++++++++++++++++++++++++++++++++++++++++++++*/
 @keyframes menuFixed{
 	0%{
 		top: -50px;

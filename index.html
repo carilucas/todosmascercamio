@@ -56,20 +56,20 @@
         </div>
         <div class="bottom-news">
           <div class="container">
-            <div class="slideshow-container">
-              <div class="mySlides fade">
+            <div class="slidenews-container">
+              <div class="noticia fade">
                 <p class="center white">
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
                 </p>
               </div>
-              <div class="mySlides fade">
+              <div class="noticia fade">
                 <p class="center white">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
                 </p>
               </div>
-              <div class="mySlides fade">
+              <div class="noticia fade">
                 <p class="center white">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,   
                 </p>
               </div>
             </div>
@@ -77,25 +77,27 @@
         </div>
       </div>
     </div>
-    <div class="container">
-      <div class="col-2-equals">
-        <div class="col">
-          <div class="header-brand">
-            <img src="images/01-logo-color.svg">
+    <div class="header-brand-buscar">
+      <div class="container">
+        <div class="col-2-equals">
+          <div class="col">
+            <div class="header-brand">
+              <img src="images/01-logo-color.svg">
+            </div>
           </div>
-        </div>
-        <div class="col">
-          <div class="contador-container-out">
-            <div class="contador-container-in">
-              <div class="text background-color3">
-                <p class="white center">
-                  Establecimientos registrados
-                </p>
-              </div>
-              <div class="number background-color5">
-                <p class="white center">
-                  1'000.000
-                </p>
+          <div class="col">
+            <div class="contador-container-out">
+              <div class="contador-container-in">
+                <div class="text background-color3">
+                  <p class="white center">
+                    Establecimientos registrados
+                  </p>
+                </div>
+                <div class="number background-color5">
+                  <p class="white center">
+                    1'000.000
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -133,7 +135,7 @@
               </select>
             </div>
             <div class="col col4">
-              <input type="submit" name="" class="background-color3 white center button center-button" value="BUSCAR">
+              <input type="submit" name="" class="background-color3 white center button center-button" value="BUSCAR" id="buscar">
             </div>
           </div>
         </div>
@@ -184,8 +186,25 @@
           </div>
         </div>
       </div>
+      <div id="popup">
+        <div class="popup-overlay">
+          <div class="popup-box-out background-white">
+            <div class="popup-box-in">
+              <p id="close-popup-mapa-home" class="background-color3 white center">
+                x
+              </p>
+              <h6 class="center color1">
+                Para una mejor experiencia, mueve el pin a tu ubicación exacta.
+              </h6>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15959.183312968535!2d-78.48655964999999!3d-0.19238725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sec!4v1584582805316!5m2!1ses-419!2sec" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+              <input type="submit" id="confirmar-ubicacion" class="button center-button background-color5 white center confirmar" value="CONFIRMAR UBICACIÓN">
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
-    <section id="section-2-buscar" class="background-grey">
+    <div id="pos-to-fix-menu"></div>
+    <section id="section-2-buscar" style="display: none;">
       <div class="background-color2 buscador">
           <p class="center white recomendaciones">
               <i class="fas fa-exclamation-triangle white"></i> Revisa nuestra <a href="#recomendaciones" class="white"><b>Recomendaciones</b></a>
@@ -195,105 +214,146 @@
       <div id="menu-iconos" class="background-color1 ">
         <div class="locales-menu-icons">
             <div class="col-2-equals">
-              <div id="icon-categorias" class="col center background-white">
-                  <i class="fas fa-sliders-h color3"></i>
+              <div id="icon-categorias" class="col center only-mobile">
+                  <div class="icon-wrapper background-white">
+                    <i class="fas fa-sliders-h color3"></i>
+                  </div>
+                  <p class="center white">
+                    Ver categorías
+                  </p>
               </div>
-              <a href="#top-menu-iconos" id="boton-expand" class="col center background-white">
-                  <i id="icon-map" class="fas fa-map-marked-alt color3"></i>
-                  <i id="icon-list" class="far fa-list-alt color3 display-none"></i>
+              <a href="#top-menu-iconos" id="boton-expand" class="col center">
+                  <div class="icon-wrapper background-white">
+                    <i id="icon-map" class="fas fa-map-marked-alt color3"></i>
+                    <i id="icon-list" class="far fa-list-alt color3 display-none"></i>
+                  </div>
+                  <p class="white center" id="ver-mapa">
+                    Ver Mapa
+                  </p>
+                  <p class="white center display-none" id="ver-lista">
+                    Ver Lista
+                  </p>
               </a>
             </div>
         </div>
       </div>
-      <div class="menu-categorias-wrapper">
-        <div id="menu-categorias" class="menu-categorias-out background-white">
-          <div class="menu-categorias-in">
-            <h6 class="color2 center">CATEGORÍAS</h6>
-            <ul>
-              <li class="categoria col-2-equals">
-                <div class="col">
-                  <img src="images/07-1abaarrotes.svg" class="img-center categoria-icon">
-                </div>
-                <div class="col color3 categoria-text">
-                  Tiendas de abarrotes
-                </div>
-              </li>
-              <li class="categoria col-2-equals">
-                <div class="col">
-                  <img src="images/07-2tienda.svg" class="img-center categoria-icon">
-                </div>
-                <div class="col color3 categoria-text">
-                  Tiendas / Micros
-                </div>
-              </li>
-              <li class="categoria col-2-equals">
-                <div class="col">
-                  <img src="images/07-3restaurante.svg" class="img-center categoria-icon">
-                </div>
-                <div class="col color3 categoria-text">
-                  Restaurantes
-                </div>
-              </li>
-              <li class="categoria col-2-equals">
-                <div class="col">
-                  <img src="images/07-4frutas.svg" class="img-center categoria-icon">
-                </div>
-                <div class="col color3 categoria-text">
-                  Frutas / Verduras
-                </div>
-              </li>
-              <li class="categoria col-2-equals">
-                <div class="col">
-                  <img src="images/07-5panaderia.svg" class="img-center categoria-icon">
-                </div>
-                <div class="col color3 categoria-text">
-                  Panaderías
-                </div>
-              </li>
-              <li class="categoria col-2-equals">
-                <div class="col">
-                  <img src="images/07-6mascota.svg" class="img-center categoria-icon">
-                </div>
-                <div class="col color3 categoria-text">
-                  Mascotas
-                </div>
-              </li>
-              <li class="categoria col-2-equals">
-                <div class="col">
-                  <img src="images/07-7medico.svg" class="img-center categoria-icon">
-                </div>
-                <div class="col color3 categoria-text">
-                  Servicios Médicos
-                </div>
-              </li>
-              <li class="categoria col-2-equals">
-                <div class="col">
-                  <img src="images/07-8farmacias.svg" class="img-center categoria-icon">
-                </div>
-                <div class="col color3 categoria-text">
-                  Farmacias
-                </div>
-              </li>
-              <li class="categoria col-2-equals">
-                <div class="col">
-                  <img src="images/07-9otros.svg" class="img-center categoria-icon">
-                </div>
-                <div class="col color3 categoria-text">
-                  Otros
-                </div>
-              </li>
-            </ul>
+      <div class="global-results container">
+        <div class="menu-categorias-wrapper">
+          <div id="menu-categorias" class="menu-categorias-out background-white">
+            <div class="menu-categorias-in">
+              <h6 class="color2">CATEGORÍAS</h6>
+              <ul>
+                <li class="categoria">
+                  <div class="col col-icon">
+                    <img src="images/07-1abaarrotes.svg" class="img-center categoria-icon">
+                  </div>
+                  <div class="col color3 categoria-text">
+                    Tiendas de abarrotes
+                  </div>
+                  <div class="col categoria-contador">
+                    20
+                  </div>
+                </li>
+                <li class="categoria">
+                  <div class="col col-icon">
+                    <img src="images/07-2tienda.svg" class="img-center categoria-icon">
+                  </div>
+                  <div class="col color3 categoria-text">
+                    Tiendas / Micros
+                  </div>
+                  <div class="col categoria-contador">
+                    20
+                  </div>
+                </li>
+                <li class="categoria">
+                  <div class="col col-icon">
+                    <img src="images/07-3restaurante.svg" class="img-center categoria-icon">
+                  </div>
+                  <div class="col color3 categoria-text">
+                    Restaurantes
+                  </div>
+                  <div class="col categoria-contador">
+                    20
+                  </div>
+                </li>
+                <li class="categoria">
+                  <div class="col col-icon">
+                    <img src="images/07-4frutas.svg" class="img-center categoria-icon">
+                  </div>
+                  <div class="col color3 categoria-text">
+                    Frutas / Verduras
+                  </div>
+                  <div class="col categoria-contador">
+                    20
+                  </div>
+                </li>
+                <li class="categoria">
+                  <div class="col col-icon">
+                    <img src="images/07-5panaderia.svg" class="img-center categoria-icon">
+                  </div>
+                  <div class="col color3 categoria-text">
+                    Panaderías
+                  </div>
+                  <div class="col categoria-contador">
+                    20
+                  </div>
+                </li>
+                <li class="categoria">
+                  <div class="col col-icon">
+                    <img src="images/07-6mascota.svg" class="img-center categoria-icon">
+                  </div>
+                  <div class="col color3 categoria-text">
+                    Mascotas
+                  </div>
+                  <div class="col categoria-contador">
+                    20
+                  </div>
+                </li>
+                <li class="categoria">
+                  <div class="col col-icon">
+                    <img src="images/07-7medico.svg" class="img-center categoria-icon">
+                  </div>
+                  <div class="col color3 categoria-text">
+                    Servicios Médicos
+                  </div>
+                  <div class="col categoria-contador">
+                    20
+                  </div>
+                </li>
+                <li class="categoria">
+                  <div class="col col-icon">
+                    <img src="images/07-8farmacias.svg" class="img-center categoria-icon">
+                  </div>
+                  <div class="col color3 categoria-text">
+                    Farmacias
+                  </div>
+                  <div class="col categoria-contador">
+                    20
+                  </div>
+                </li>
+                <li class="categoria">
+                  <div class="col col-icon">
+                    <img src="images/07-9otros.svg" class="img-center categoria-icon">
+                  </div>
+                  <div class="col color3 categoria-text">
+                    Otros
+                  </div>
+                  <div class="col categoria-contador">
+                    20
+                  </div>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="resultados-container">
-        <div id="lista-locales" class="col col-left">  
-          <div class="lista-locales-out background-white">
-            <div class="lista-locales-in">
-              <h4 class="bebas center color2">
-                Todas las categorías
-              </h4>
-              <ul>
+        <div class="resultados-container">
+          <div id="lista-locales" class="col col-left">  
+            <div class="lista-locales-out background-white">
+              <div class="lista-locales-in">
+                <h4 class="bebas center color1">
+                  Hemos encontrado <span class="color4">20</span> tiendas para tí
+                </h4>
+                <ul>
                   <li id="local-container" class="col-2">
                     <div class="col col-left">
                       <div class="img-container foto-local">
@@ -301,8 +361,13 @@
                       </div>
                     </div>
                     <div class="col col-right">
+                      <p class="color4 tipo-negocio">
+                        Tienda
+                      </p>
                       <h5 class="color1 bebas titulo-comercio">
-                        Tienda De Juanita
+                        Tienda De Juanita <span id="id-negocio" class="color3">
+                          Id: 234673
+                        </span>
                       </h5>
                       <p class="color3">
                         <span clas="direccion"><i class="fas fa-map-marker-alt color2"></i> Portugal y Catalina Aldaz </span>| <span class="referencia bold">Arriba del colegio Benalcazar</span>
@@ -329,141 +394,161 @@
                     </div>
                   </li>
                   <li id="local-container" class="col-2">
-                    <div class="col col-left">
-                      <div class="img-container foto-local">
-                        <img src="images/08-local.jpg" class="img-center" alt="">
+                      <div class="col col-left">
+                        <div class="img-container foto-local">
+                          <img src="images/08-local.jpg" class="img-center" alt="">
+                        </div>
                       </div>
-                    </div>
-                    <div class="col col-right">
-                      <h5 class="color1 bebas titulo-comercio" >
-                        Tienda De Juanita
-                      </h5>
-                      <p class="color3">
-                        <span clas="direccion"><i class="fas fa-map-marker-alt color2"></i> Portugal y Catalina Aldaz </span>| <span class="referencia bold">Arriba del colegio Benalcazar</span>
-                      </p>
-                      <p class="descripcion color3">
-                        Somos una tienda de barrio, donde podrás encontrar todo tipo de alimientos y bebidas.
-                      </p>
-                      <p class="horario color2">
-                        <i class="far fa-clock color3"></i> 09:30 - 18:30
-                      </p>
-                      <a href="" class="button whatsapp-button background-color2">
-                        <div class="col-left center">
-                          <i class="fab fa-whatsapp white"></i>
-                        </div>
-                        <div class="col-right">
-                          <p class="white">
-                            CONTÁCTATE POR
-                          </p>
-                          <h6 class="white">
-                            WhatsApp
-                          </h6>
-                        </div>
-                      </a>
-                    </div>
-                  </li>
-                  <li id="local-container" class="col-2">
-                    <div class="col col-left">
-                      <div class="img-container foto-local">
-                        <img src="images/08-local.jpg" class="img-center" alt="">
+                      <div class="col col-right">
+                        <p class="color4 tipo-negocio">
+                          Tienda
+                        </p>
+                        <h5 class="color1 bebas titulo-comercio">
+                          Tienda De Juanita <span id="id-negocio" class="color3">
+                            Id: 234673
+                          </span>
+                        </h5>
+                        <p class="color3">
+                          <span clas="direccion"><i class="fas fa-map-marker-alt color2"></i> Portugal y Catalina Aldaz </span>| <span class="referencia bold">Arriba del colegio Benalcazar</span>
+                        </p>
+                        <p class="descripcion color3">
+                          Somos una tienda de barrio, donde podrás encontrar todo tipo de alimientos y bebidas.
+                        </p>
+                        <p class="horario color2">
+                          <i class="far fa-clock color3"></i> 09:30 - 18:30
+                        </p>
+                        <a href="" class="button whatsapp-button background-color2">
+                          <div class="col-left center">
+                            <i class="fab fa-whatsapp white"></i>
+                          </div>
+                          <div class="col-right">
+                            <p class="white">
+                              CONTÁCTATE POR
+                            </p>
+                            <h6 class="white">
+                              WhatsApp
+                            </h6>
+                          </div>
+                        </a>
                       </div>
-                    </div>
-                    <div class="col col-right">
-                      <h5 class="color1 bebas titulo-comercio">
-                        Tienda De Juanita
-                      </h5>
-                      <p class="color3">
-                        <span clas="direccion"><i class="fas fa-map-marker-alt color2"></i> Portugal y Catalina Aldaz </span>| <span class="referencia bold">Arriba del colegio Benalcazar</span>
-                      </p>
-                      <p class="descripcion color3">
-                        Somos una tienda de barrio, donde podrás encontrar todo tipo de alimientos y bebidas.
-                      </p>
-                      <p class="horario color2">
-                        <i class="far fa-clock color3"></i> 09:30 - 18:30
-                      </p>
-                      <a href="" class="button whatsapp-button background-color2">
-                        <div class="col-left center">
-                          <i class="fab fa-whatsapp white"></i>
+                    </li>
+                    <li id="local-container" class="col-2">
+                      <div class="col col-left">
+                        <div class="img-container foto-local">
+                          <img src="images/08-local.jpg" class="img-center" alt="">
                         </div>
-                        <div class="col-right">
-                          <p class="white">
-                            CONTÁCTATE POR
-                          </p>
-                          <h6 class="white">
-                            WhatsApp
-                          </h6>
-                        </div>
-                      </a>
-                    </div>
-                  </li>
-                  <li id="local-container" class="col-2">
-                    <div class="col col-left">
-                      <div class="img-container foto-local">
-                        <img src="images/08-local.jpg" class="img-center" alt="">
                       </div>
-                    </div>
-                    <div class="col col-right">
-                      <h5 class="color1 bebas titulo-comercio">
-                        Tienda De Juanita
-                      </h5>
-                      <p class="color3">
-                        <span clas="direccion"><i class="fas fa-map-marker-alt color2"></i> Portugal y Catalina Aldaz </span>| <span class="referencia bold">Arriba del colegio Benalcazar</span>
-                      </p>
-                      <p class="descripcion color3">
-                        Somos una tienda de barrio, donde podrás encontrar todo tipo de alimientos y bebidas.
-                      </p>
-                      <p class="horario color2">
-                        <i class="far fa-clock color3"></i> 09:30 - 18:30
-                      </p>
-                      <a href="" class="button whatsapp-button background-color2">
-                        <div class="col-left center">
-                          <i class="fab fa-whatsapp white"></i>
-                        </div>
-                        <div class="col-right">
-                          <p class="white">
-                            CONTÁCTATE POR
-                          </p>
-                          <h6 class="white">
-                            WhatsApp
-                          </h6>
-                        </div>
-                      </a>
-                    </div>
-                  </li>
-                  <li id="local-container" class="col-2">
-                    <div class="col col-left">
-                      <div class="img-container foto-local">
-                        <img src="images/08-local.jpg" class="img-center" alt="">
+                      <div class="col col-right">
+                        <p class="color4 tipo-negocio">
+                          Tienda
+                        </p>
+                        <h5 class="color1 bebas titulo-comercio">
+                          Tienda De Juanita <span id="id-negocio" class="color3">
+                            Id: 234673
+                          </span>
+                        </h5>
+                        <p class="color3">
+                          <span clas="direccion"><i class="fas fa-map-marker-alt color2"></i> Portugal y Catalina Aldaz </span>| <span class="referencia bold">Arriba del colegio Benalcazar</span>
+                        </p>
+                        <p class="descripcion color3">
+                          Somos una tienda de barrio, donde podrás encontrar todo tipo de alimientos y bebidas.
+                        </p>
+                        <p class="horario color2">
+                          <i class="far fa-clock color3"></i> 09:30 - 18:30
+                        </p>
+                        <a href="" class="button whatsapp-button background-color2">
+                          <div class="col-left center">
+                            <i class="fab fa-whatsapp white"></i>
+                          </div>
+                          <div class="col-right">
+                            <p class="white">
+                              CONTÁCTATE POR
+                            </p>
+                            <h6 class="white">
+                              WhatsApp
+                            </h6>
+                          </div>
+                        </a>
                       </div>
-                    </div>
-                    <div class="col col-right">
-                      <h5 class="color1 bebas titulo-comercio">
-                        Tienda De Juanita
-                      </h5>
-                      <p class="color3">
-                        <span clas="direccion"><i class="fas fa-map-marker-alt color2"></i> Portugal y Catalina Aldaz </span>| <span class="referencia bold">Arriba del colegio Benalcazar</span>
-                      </p>
-                      <p class="descripcion color3">
-                        Somos una tienda de barrio, donde podrás encontrar todo tipo de alimientos y bebidas.
-                      </p>
-                      <p class="horario color2">
-                        <i class="far fa-clock color3"></i> 09:30 - 18:30
-                      </p>
-                      <a href="" class="button whatsapp-button background-color2">
-                        <div class="col-left center">
-                          <i class="fab fa-whatsapp white"></i>
+                    </li>
+                    <li id="local-container" class="col-2">
+                      <div class="col col-left">
+                        <div class="img-container foto-local">
+                          <img src="images/08-local.jpg" class="img-center" alt="">
                         </div>
-                        <div class="col-right">
-                          <p class="white">
-                            CONTÁCTATE POR
-                          </p>
-                          <h6 class="white">
-                            WhatsApp
-                          </h6>
+                      </div>
+                      <div class="col col-right">
+                        <p class="color4 tipo-negocio">
+                          Tienda
+                        </p>
+                        <h5 class="color1 bebas titulo-comercio">
+                          Tienda De Juanita <span id="id-negocio" class="color3">
+                            Id: 234673
+                          </span>
+                        </h5>
+                        <p class="color3">
+                          <span clas="direccion"><i class="fas fa-map-marker-alt color2"></i> Portugal y Catalina Aldaz </span>| <span class="referencia bold">Arriba del colegio Benalcazar</span>
+                        </p>
+                        <p class="descripcion color3">
+                          Somos una tienda de barrio, donde podrás encontrar todo tipo de alimientos y bebidas.
+                        </p>
+                        <p class="horario color2">
+                          <i class="far fa-clock color3"></i> 09:30 - 18:30
+                        </p>
+                        <a href="" class="button whatsapp-button background-color2">
+                          <div class="col-left center">
+                            <i class="fab fa-whatsapp white"></i>
+                          </div>
+                          <div class="col-right">
+                            <p class="white">
+                              CONTÁCTATE POR
+                            </p>
+                            <h6 class="white">
+                              WhatsApp
+                            </h6>
+                          </div>
+                        </a>
+                      </div>
+                    </li>
+                    <li id="local-container" class="col-2">
+                      <div class="col col-left">
+                        <div class="img-container foto-local">
+                          <img src="images/08-local.jpg" class="img-center" alt="">
                         </div>
-                      </a>
-                    </div>
-                  </li>
+                      </div>
+                      <div class="col col-right">
+                        <p class="color4 tipo-negocio">
+                          Tienda
+                        </p>
+                        <h5 class="color1 bebas titulo-comercio">
+                          Tienda De Juanita <span id="id-negocio" class="color3">
+                            Id: 234673
+                          </span>
+                        </h5>
+                        <p class="color3">
+                          <span clas="direccion"><i class="fas fa-map-marker-alt color2"></i> Portugal y Catalina Aldaz </span>| <span class="referencia bold">Arriba del colegio Benalcazar</span>
+                        </p>
+                        <p class="descripcion color3">
+                          Somos una tienda de barrio, donde podrás encontrar todo tipo de alimientos y bebidas.
+                        </p>
+                        <p class="horario color2">
+                          <i class="far fa-clock color3"></i> 09:30 - 18:30
+                        </p>
+                        <a href="" class="button whatsapp-button background-color2">
+                          <div class="col-left center">
+                            <i class="fab fa-whatsapp white"></i>
+                          </div>
+                          <div class="col-right">
+                            <p class="white">
+                              CONTÁCTATE POR
+                            </p>
+                            <h6 class="white">
+                              WhatsApp
+                            </h6>
+                          </div>
+                        </a>
+                      </div>
+                    </li>
                 </ul>
                 <div class="paginacion">
                   <div class="col-2-equals">
@@ -475,12 +560,13 @@
                     </div>
                   </div>
                 </div>
+              </div>
             </div>
           </div>
-        </div>
-        <div id="mapa" class="col col-right">
-          <div class="map-container">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15959.183312968535!2d-78.48655964999999!3d-0.19238725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sec!4v1584582805316!5m2!1ses-419!2sec" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+          <div id="mapa" class="col col-right">
+            <div class="map-container">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15959.183312968535!2d-78.48655964999999!3d-0.19238725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sec!4v1584582805316!5m2!1ses-419!2sec" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </div>
           </div>
         </div>
       </div>
@@ -574,7 +660,7 @@
                 Después de recibir sus productos recuerde lavarse las manos y desinfectarse con alcohol.
               </li>
               <li class="color4 justify">
-                Por tu seguridad nunca entreges información sensible sobre los datos de tu tarjeta a través de mensajes.
+                Ten mucho cuidado a la hora de entrega información personal
               </li>
             </ul>
           </div>
@@ -674,5 +760,6 @@
   </footer>
   <script type="text/javascript" src="resultados.js"></script>
   <script type="text/javascript" src="top_news.js"></script>
+  <script type="text/javascript" src="popup.js"></script>
  </body>
 </html>

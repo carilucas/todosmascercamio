@@ -1,18 +1,18 @@
-var slideIndex = 0;
-showSlides();
+var newsIndex = 0;
+showNews();
 
-function showSlides() {
+function showNews() {
   var i;
-  var slides = document.getElementsByClassName("mySlides");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
+  var news = document.getElementsByClassName("noticia");
+  for (i = 0; i < news.length; i++) {
+    news[i].style.display = "none";  
   }
-  slideIndex++;
-  if (slideIndex > slides.length) {
-    slideIndex = 1;
+  newsIndex++;
+  if (newsIndex > news.length) {
+    newsIndex = 1;
   }    
-  slides[slideIndex-1].style.display = "block"; 
-  setTimeout(showSlides, 8000); // Change image every 2 seconds
+  news[newsIndex-1].style.display = "flex"; 
+  setTimeout(showNews, 8000); // Change image every 2 seconds
 }
 
 var closeNews = document.getElementById('close-news');
