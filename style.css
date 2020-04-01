@@ -69,6 +69,7 @@
 .noticia {
 	display: none;
 	position: relative;
+	justify-content: center;
 	align-items: center;
 	height: 40px;
 }
@@ -327,6 +328,24 @@ img{
 }
 /*-------------body--------------*/
 /*---Header---*/
+header .header-top{
+	padding: 10px 0;
+}
+header .header-top .col-4-equals .col{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 0;
+}
+header .header-top .col-4-equals .col i{
+	margin-right: 5px;
+}
+header .header-top .col-4-equals .col .center-button{
+	margin: 5px auto;
+}
+header .header-brand{
+	margin-bottom: 10px;
+}
 header .news-container-in .top-news{
 	border-bottom: 1px solid rgba(255,255,255,1);
 	padding: 5px;
